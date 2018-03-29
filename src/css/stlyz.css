@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #eeeceb;
+}
+body .outer {
+  margin: 40px auto;
+  padding: 100px;
+  text-align: center;
+  background: #fff;
+  width: 500px;
+}
+body .call {
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ff0066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: out 3s cubic-bezier(0.22, 0.61, 0.36, 1) 1s infinite;
+  z-index: 1;
+}
+body .call span {
+  background: url(../images/call.svg) no-repeat;
+  background-size: 50px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  animation: phone 3s ease-out 1.1s infinite;
+  transform: translateX(0) rotateY(180deg);
+}
+body .call:before {
+  position: absolute;
+  align-self: center;
+  width: 0;
+  height: 0;
+  content: '';
+  border-radius: 50%;
+  animation: inner 3s cubic-bezier(0.22, 0.61, 0.36, 1) 1.1s infinite;
+}
+body .call:after {
+  position: absolute;
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  content: '';
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 0px rgba(255, 0, 102, 0);
+  animation: outs 3s cubic-bezier(0.22, 0.61, 0.36, 1) 2s infinite forwards;
+  z-index: -1;
+  background: #ff0066;
+}
+@keyframes out {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.15);
+  }
+}
+@keyframes outs {
+  0% {
+    transform: scale(1);
+    box-shadow: 0px 0px 0px 0px rgba(255, 0, 102, 0);
+  }
+  25% {
+    transform: scale(1.15);
+    box-shadow: 0px 0px 0px 18px rgba(255, 0, 102, 0.1);
+  }
+  100% {
+    transform: scale(1.15);
+    box-shadow: 0px 0px 0px 18px rgba(255, 0, 102, 0);
+  }
+}
+@keyframes inner {
+  0%,
+  50%,
+  100% {
+    border: solid 0 rgba(255, 255, 255, 0);
+  }
+  25% {
+    border: solid 40px rgba(255, 255, 255, 0.4);
+  }
+}
+@keyframes phone {
+  0%,
+  35%,
+  100% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  3%,
+  9%,
+  15% {
+    transform: translateX(-10px) rotateY(180deg);
+  }
+  6%,
+  12%,
+  18% {
+    transform: translateX(10px) rotateY(180deg);
+  }
+}
+.tickbox {
+  width: 320px;
+  height: 570px;
+  border-radius: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.tickbox .screenone {
+  background: #feb626;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  padding: 140px 70px 0 70px;
+  text-align: left;
+  line-height: 1;
+}
+.tickbox .screenone h1 {
+  font-size: 56px;
+  font-family: roboto;
+  font-weight: 600;
+  color: #ffffff;
+  animation: move 488.983ms linear 2988.64ms forwards;
+}
+.tickbox .screenone h1 p {
+  font-size: 20px;
+  font-family: roboto;
+  font-weight: 600;
+  color: #000;
+}
+.tickbox .screenone h1 span {
+  font-size: 53px;
+  font-family: open sans;
+  font-weight: 300;
+  color: #fff;
+  display: block;
+}
+.tickbox .screenone .fli {
+  animation: fly 1000ms linear 2000ms forwards;
+}
+.tickbox .road {
+  animation: road 1503.76ms linear 2591.22ms forwards;
+}
+.tickbox .screentwo {
+  width: 100%;
+  height: 100%;
+  animation: flight 3249.75ms ease-out 2389.72ms forwards;
+}
+.tickbox .screentwo .ticket {
+  padding-top: 370px;
+  background: #3dbff1;
+  text-align: center;
+  margin-top: -5px;
+}
+.tickbox .screentwo .ticket span {
+  display: block;
+  font-family: roboto;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: tex 988.637ms ease-out 6532.34ms both;
+  opacity: 0;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 0px #909090;
+}
+.tickbox .screentwo .ticket p {
+  display: block;
+  font-family: roboto;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  animation: tex 1004.99ms ease-out 6537.56ms both;
+  opacity: 0;
+  text-shadow: 1px 1px 0px #909090;
+}
+.tickbox .screentwo .ticket h2 {
+  display: block;
+  font-family: roboto;
+  font-weight: 600;
+  font-size: 24px;
+  color: #fff;
+  animation: texx 1313.19ms ease-out 7534.37ms forwards;
+  opacity: 0;
+  text-shadow: 1px 1px 0px #909090;
+  margin-top: -40px;
+}
+.tickbox .screentwo .ticket .ticketi {
+  margin-top: 50px;
+}
+@keyframes fly {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(260px, -180px, 180px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-280px);
+  }
+}
+@keyframes road {
+  0% {
+    transform: translateY(-1280px);
+  }
+  100% {
+    transform: translateY(-950px);
+  }
+}
+@keyframes flight {
+  0% {
+    transform: translateY(1280px);
+  }
+  100% {
+    transform: translateY(-1740px);
+  }
+}
+@keyframes tex {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  5% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+  99% {
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes texx {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-8px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
